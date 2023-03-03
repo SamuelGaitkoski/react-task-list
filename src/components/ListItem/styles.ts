@@ -12,6 +12,7 @@ export const Container = styled.div(({ done }: ContainerProps) => (
     border-radius: 10px;
     margin-bottom: 10px;
     align-items: center;
+    justify-content: space-between;
 
     input {
         width: 25px;
@@ -23,4 +24,18 @@ export const Container = styled.div(({ done }: ContainerProps) => (
         color: #CCC;
         text-decoration: ${done ? 'line-through' : 'initial'};
     }
+
+    button {
+        height: 25px;
+    }
 `));
+
+export const LeftArea = styled.div`
+    display: flex;
+    align-items: center;
+`;
+
+export const RightArea = styled.div`
+    display: flex;
+    align-items: center;
+`;

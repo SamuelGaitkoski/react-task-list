@@ -38,6 +38,14 @@ const App = () => {
     setList(newList);
   }
 
+  const handleDeleteItem = (id: number) => {
+    let newList = [...list];
+
+    newList = newList.filter((item) => item.id !== id);
+
+    setList(newList);
+  }
+
   return (
     <C.Container>
       <C.Area>
@@ -48,7 +56,7 @@ const App = () => {
 
         {/* quando o list muda, ele renderiza o list novamente, o React ve o que mudou e modifica o que mudou, jogando um novo item quando o mesmo é adicionado na lista */}
         {list.map((item, index) => (
-          <ListItem key={index} item={item} onUpdateDone={handleUpdateDone} />
+          <ListItem key={index} item={item} onUpdateDone={handleUpdateDone} onDeleteItem={handleDeleteItem} />
         ))}
       </C.Area>
     </C.Container>
