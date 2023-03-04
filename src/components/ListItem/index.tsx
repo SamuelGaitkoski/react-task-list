@@ -8,9 +8,10 @@ type Props = {
     item: Item;
     onUpdateDone: (id: number, checked: boolean) => void;
     onDeleteItem: (id: number) => void;
+    onEditItem: (id: number) => void;
 }
 
-export const ListItem = ({ item, onUpdateDone, onDeleteItem }: Props) => {
+export const ListItem = ({ item, onUpdateDone, onDeleteItem, onEditItem }: Props) => {
     return (
         <C.Container done={item.done}>
             <C.LeftArea>
@@ -22,6 +23,7 @@ export const ListItem = ({ item, onUpdateDone, onDeleteItem }: Props) => {
                 <label>{item.name}</label>
             </C.LeftArea>
             <C.RightArea>
+                <button onClick={() => onEditItem(item.id)}>Edit</button>
                 <button onClick={() => onDeleteItem(item.id)}>Delete</button>
             </C.RightArea>
         </C.Container>

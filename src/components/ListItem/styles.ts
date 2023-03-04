@@ -27,6 +27,7 @@ export const Container = styled.div(({ done }: ContainerProps) => (
 
     button {
         height: 25px;
+        margin-left: 8px;
     }
 `));
 
