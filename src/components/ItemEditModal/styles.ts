@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     width: 500px;
-    height: 160px;
+    height: 200px;
     background-color: #20212C;
     border-radius: 10px;
     padding: 15px;
@@ -14,7 +14,7 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h3`
-
+    color: #FFF;
 `;
 
 export const Input = styled.input`

@@ -14,7 +14,7 @@ export const ItemEditModal = ({ item, onSaveEdit }: Props) => {
 
     const handleSaveEditItem = (id: number, nameEdited: string) => {
         if(nameEdited) {
-            onSaveEdit(item.id, nameEdited);
+            onSaveEdit(id, nameEdited);
         } else {
             setErrorSubmit("The input can't be empty.");
         }        
@@ -33,7 +33,7 @@ export const ItemEditModal = ({ item, onSaveEdit }: Props) => {
                 <p>{errorSubmit}</p>
             }
             <C.ButtonArea>
-                <C.Button onClick={handleSaveEditItem}>Salvar</C.Button>
+                <C.Button onClick={() => handleSaveEditItem(item.id, nameEdited)}>Salvar</C.Button>
             </C.ButtonArea>
         </C.Container>
     );
